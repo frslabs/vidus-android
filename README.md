@@ -71,15 +71,9 @@ After that, add the following code to your `app` level `build.gradle` file
 defaultConfig { 
 
     // ...
-    
-    ndk { 
-        abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64" 
-    } 
 
     vectorDrawables.useSupportLibrary true 
     
-    renderscriptTargetApi 21 
-    renderscriptSupportModeEnabled false 
 }
 
 // ...
