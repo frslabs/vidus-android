@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.1-blue)
+![version](https://img.shields.io/badge/version-v2.0.4-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -90,7 +90,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.1'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.4'
     
     // Vidus Additional Depedencies 
     implementation 'com.google.android.gms:play-services-vision:11.0.4'
@@ -183,6 +183,7 @@ public class MainActivity extends AppCompatActivity implements VidusResultCallba
         //Build the Vidus Sdk Config object with the appropriate configurations
         VidusConfig vidusConfig = new VidusConfig.Builder()
                 .setLicenseKey(VIDUS_LICENSE_KEY)
+                .setShowInstruction(false) 
                 .setEncryptionKey(VIDUS_ENCRYPTION_KEY)
                 .setVidusNode(vidusNode)
                 .setApiCredentials(new VidusApiCredentials(VIDUS_API_BASE_URL
