@@ -810,7 +810,7 @@ Captures a video recording with a user defined time
 
 <tr>
 <td><b>setLanguage</b>(<em>String language</em>)</td>
-<td>Sets the language in which text set in `setVideoChallengeTextToSpeak` has to be spoken</td>
+<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak<i><b> has to be spoken</td>
 </tr>
 
 <tr>
