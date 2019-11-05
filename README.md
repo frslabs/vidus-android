@@ -598,7 +598,7 @@ Each of the individual Node result classes are breifed below
 <tr>
 <td>String</td>
 <td>getFallbackVideoChallengeTextToSpeak()</td>
-<td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking `VideoChallengeText` in a different language failed)</td>
+<td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking <b><i>VideoChallengeText</i></b> in a different language failed)</td>
 </tr>
 
 <tr>
@@ -810,7 +810,7 @@ Captures a video recording with a user defined time
 
 <tr>
 <td><b>setLanguage</b>(<em>String language</em>)</td>
-<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak<i><b> has to be spoken</td>
+<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak</i></b> has to be spoken</td>
 </tr>
 
 <tr>
