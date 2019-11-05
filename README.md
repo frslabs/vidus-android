@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.5-blue)
+![version](https://img.shields.io/badge/version-v2.0.6-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -90,7 +90,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.5'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.6'
     
     // Vidus Additional Depedencies 
     implementation 'com.google.android.gms:play-services-vision:11.0.4'
@@ -271,6 +271,10 @@ Initialise `VidusNode` to include all the nodes as given below
                 .addNode(VIDEO_CHALLENGE_NODE, new VideoChallengeNode()
                         .setVideoChallengeText("Enter your question here. Prompt to confirm.")
                         .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_MALE)
+                        .setVideoChallengeTextToSpeak("पाठ को अंग्रेजी में फॉलबैक के रूप में बोला जाए। पुष्टि करने के लिए शीघ्र"
+                            , "Enter text to be spoken as fallback ion english. Prompt to confirm. ")
+                        .setLanguage("hi_IN")
+                        .setImageUpload(true)
                         .setPositiveButtonText("Yes")
                         .setNegativeButtonText("No")
                         .setVideoChallengeTextTime(4))
@@ -587,6 +591,18 @@ Each of the individual Node result classes are breifed below
 
 <tr>
 <td>String</td>
+<td>getVideoChallengeTextToSpeak()</td>
+<td>Gets the text which was spoken</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getFallbackVideoChallengeTextToSpeak()</td>
+<td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking `VideoChallengeText` in a different language failed)</td>
+</tr>
+
+<tr>
+<td>String</td>
 <td>getImagePath()</td>
 <td>Gets the screenshot image path</td>
 </tr>
@@ -773,13 +789,33 @@ Captures a video recording with a user defined time
 </tr>
 <tr>
 <td><b>setVideoChallengeText</b>(<em>String videoChallengeText</em>)</td>
-<td>Sets the text that will be spoken.
+<td>Sets the text that will be displayed.
 </tr>
 
 <tr>
 <td><b>setVideoChallengeTextTime</b>(<em>int videoChallengeTextTime</em>)</td>
 <td>Sets the time(<em>seconds</em>) taken for the recording of the node.
 </br></br> Values should be between <b> 1 and 100 </b> </td>
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>)</td>
+<td>Sets the text(In English) that will be spoken. </td>
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>,<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
+<td>Sets the text (Vernacular) that will be spoken, with a necessary fallback text (In English) that will be spoken if speaking the former text failed</td>
+</tr>
+
+<tr>
+<td><b>setLanguage</b>(<em>String language</em>)</td>
+<td>Sets the language in which text set in `setVideoChallengeTextToSpeak` has to be spoken</td>
+</tr>
+
+<tr>
+<td><b>setImageUpload</b>(<em>boolean imageUpload</em>)</td>
+<td>Sets the flag to upload the screenshot</td>
 </tr>
 
 <tr>
