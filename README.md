@@ -272,7 +272,7 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setVideoChallengeText("Enter your question here. Prompt to confirm.")
                         .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_MALE)
                         .setVideoChallengeTextToSpeak("पाठ को अंग्रेजी में फॉलबैक के रूप में बोला जाए।"
-                            , "Enter text to be spoken as fallback ion english. Prompt to confirm. ")
+                            , "Enter text to be spoken as fallback in english. Prompt to confirm. ")
                         .setLanguage("hi_IN")
                         .setImageUpload(true)
                         .setPositiveButtonText("Yes")
