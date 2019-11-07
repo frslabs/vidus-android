@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity implements VidusResultCallba
 
 #### Handling the result
 
-Your activity must implement `VidussResultCallback` to receive the result.
+Your activity must implement `VidusResultCallback` to receive the result.
 
 ```java
     // ...
