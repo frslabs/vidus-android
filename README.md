@@ -145,19 +145,19 @@ public class MainActivity extends AppCompatActivity implements VidusResultCallba
     // ...
 
     /* Enter the Vidus license key here */
-    private String VIDUS_LICENSE_KEY = "<ENTER_YOUR_LICENSE_KEY_HERE>";
+    private String VIDUS_LICENSE_KEY = "ENTER_YOUR_LICENSE_KEY_HERE";
 
     /* Node ID - required to identify the node in the result */
     int SIMPLE_NODE_1 = 100; 
     
     /* (OPTIONAL)  Enter the Vidus api credentials here */
-    private String VIDUS_API_BASE_URL = "<ENTER_BASE_URL_HERE>"
-            , VIDUS_API_REFERENCE_ID = "<ENTER_REF_ID_HERE>"
-            , VIDUS_API_CRED1 = "<ENTER_API_CRED1_HERE>"
-            , VIDUS_API_CRED2 = "<ENTER_API_CRED2_HERE>";
+    private String VIDUS_API_BASE_URL = "ENTER_BASE_URL_HERE"
+            , VIDUS_API_REFERENCE_ID = "ENTER_REF_ID_HERE"
+            , VIDUS_API_CRED1 = "ENTER_API_CRED1_HERE"
+            , VIDUS_API_CRED2 = "ENTER_API_CRED2_HERE";
     
     /* (OPTIONAL)  Enter the Vidus encryption key here */
-    private String VIDUS_ENCRYPTION_KEY = "<ENTER_ENCRYPTION_KEY_HERE>";
+    private String VIDUS_ENCRYPTION_KEY = "ENTER_ENCRYPTION_KEY_HERE";
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
