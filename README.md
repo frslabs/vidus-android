@@ -94,9 +94,6 @@ dependencies {
     // Vidus Core Dependency
     implementation 'com.frslabs.android.sdk:vidus:2.0.10'
     
-    // Vidus Additional Depedencies 
-    implementation 'com.google.android.gms:play-services-vision:11.0.4'
-    
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
     implementation 'com.frslabs.android.sdk:torus:0.1.0'
