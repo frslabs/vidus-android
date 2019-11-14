@@ -213,6 +213,8 @@ Your activity must implement `VidusResultCallback` to receive the result.
     public void onVidusSuccess(VidusResult vidusResult) {
 
         String videoPath = vidusResult.getVideoPath();
+        String referenceId = vidusResult.getReferenceId(); //Optional
+        
         SimpleRecorderNodeResult simpleRecorderNode = vidusResult.getSimpleRecorderNodeById(SIMPLE_NODE_1);
 
         /* Handle the Vidus Sdk result here */
@@ -294,6 +296,7 @@ For handling the result of all the nodes, refer the code below
     public void onVidusSuccess(VidusResult vidusResult) {
 
         String videoPath = vidusResult.getVideoPath();
+        String referenceId = vidusResult.getReferenceId(); //Optional
 
         SimpleRecorderNodeResult simpleRecorderNodeResult = vidusResult.getSimpleRecorderNodeById(SIMPLE_NODE_1);
         ChallengeCodeNodeResult challengeCodeNodeResult = vidusResult.getChallengeCodeNodeById(CHALLENGE_CODE_NODE);
