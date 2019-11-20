@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.13-blue)
+![version](https://img.shields.io/badge/version-v2.0.14-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -92,7 +92,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.13'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.14'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
