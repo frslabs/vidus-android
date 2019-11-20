@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.12-blue)
+![version](https://img.shields.io/badge/version-v2.0.13-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -92,7 +92,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.12'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.13'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
@@ -612,6 +612,18 @@ Each of the individual Node result classes are breifed below
 <td>String</td>
 <td>getImagePath()</td>
 <td>Gets the screenshot image path</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getImageReferenceId()</td>
+<td>Gets the image reference Id</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getImageRequestId()</td>
+<td>Gets the image request Id</td>
 </tr>
 
 </table>
