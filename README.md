@@ -450,6 +450,13 @@ Each of the individual Node result classes are breifed below
  <td>getVideoChallengeCode()</td>
  <td>Gets the code which was prompted to be spoken</td>
  </tr>
+  
+ <tr>
+ <td>boolean</td>
+ <td>isCodeVerified()</td>
+ <td>Returns whether the code spoken matches with the challenge code displayed</td>
+ </tr>
+ 
 </table>
 </div>
 
