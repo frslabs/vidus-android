@@ -629,6 +629,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 807  | Invalid Config         |
 | 808  | Transaction Failed       |
 | 809  | No Internet Available             |
+| 811  | Network Error |
 
 ## Vidus Parameters
 
