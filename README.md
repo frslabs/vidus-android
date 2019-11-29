@@ -254,7 +254,7 @@ Initialise `VidusNode` to include all the nodes as given below
                 .addNode(CHALLENGE_TEXT_NODE, new ChallengeTextNode()
                         .setVideoChallengeText("Please tell your date of birth")
                         .setVideoChallengeTextTime(5)
-                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_MALE))
+                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE))
 
                 .addNode(DECLARATION_NODE, new DeclarationNode()
                         .setVideoDeclarationText("PLACE_TEXT_HERE")
@@ -267,18 +267,16 @@ Initialise `VidusNode` to include all the nodes as given below
                 .addNode(OSV_TEXT_RECORDER_NODE, new OSVChallengeTextNode()
                         .setVideoChallengeText("Please show you PAN card")
                         .setVideoChallengeTextTime(8)
-                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_MALE))
+                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE))
                         
-                .addNode(VIDEO_CHALLENGE_NODE, new VideoChallengeNode()
+                .addNode(PIV_NODE, new PIVNode()
                         .setVideoChallengeText("Enter your question here. Prompt to confirm.")
-                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_MALE)
+                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE)
                         .setVideoChallengeTextToSpeak("पाठ को अंग्रेजी में फॉलबैक के रूप में बोला जाए।"
                             , "Enter text to be spoken as fallback in english. Prompt to confirm. ")
                         .setLanguage("hi_IN")
-                        .setImageUpload(true)
                         .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("No")
-                        .setVideoChallengeTextTime(4))
+                        .setNegativeButtonText("No"))
 
                 .build();
 
@@ -304,7 +302,7 @@ For handling the result of all the nodes, refer the code below
         DeclarationNodeResult declarationNodeResult = vidusResult.getDeclarationNodeById(DECLARATION_NODE);
         OSVRecorderNodeResult osvRecorderNodeResult = vidusResult.getOSVRecorderNodeById(OSV_RECORDER_NODE);
         OSVChallengeTextNodeResult osvChallengeTextNodeResult = vidusResult.getOSVChallengeTextNodeById(OSV_TEXT_RECORDER_NODE);
-        VideoChallengeNodeResult videoChallengeNodeResult = vidusResult.getVideoChallengeNodeById(VIDEO_CHALLENGE_NODE);
+        PIVNodeResult pivNodeResult = vidusResult.getPIVNodeById(PIV_NODE);
 
         /* Handle the Vidus Sdk result here */
         Log.i(TAG, "onActivityResult: VideoPath:" + videoPath);
@@ -314,7 +312,7 @@ For handling the result of all the nodes, refer the code below
         Log.i(TAG, "onActivityResult: " + declarationNodeResult.toString());
         Log.i(TAG, "onActivityResult: " + osvRecorderNodeResult.toString());
         Log.i(TAG, "onActivityResult: " + osvChallengeTextNodeResult.toString());
-        Log.i(TAG, "onActivityResult: " + videoChallengeNodeResult.toString());
+        Log.i(TAG, "onActivityResult: " + pivNodeResult.toString());
 
     }
 
@@ -388,15 +386,15 @@ Given below are the Result classes in brief.
  <td>Gets the exact OSVChallengeTextNode result by Id</td>
  </tr>
  <tr>
- <td>VideoChallengeNodeResult</td>
- <td>getVideoChallengeNodeById()</td>
- <td>Gets the exact VideoChallengeNode result by Id</td>
+ <td>PIVNodeResult</td>
+ <td>getPIVNodeById()</td>
+ <td>Gets the exact PIVNode result by Id</td>
  </tr>
 </table>
 </div>
 
 
-Each of the individual Node result classes are breifed below 
+Each of the individual Node result classes are briefed below 
 
 ##### SimpleRecorderNodeResult
 
@@ -571,7 +569,7 @@ Each of the individual Node result classes are breifed below
 </div>
 
 
-##### VideoChallengeNodeResult
+##### PIVNodeResult
 
 <div>
 <table style="width:100%">
@@ -615,24 +613,6 @@ Each of the individual Node result classes are breifed below
 <td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking <b><i>VideoChallengeText</i></b> in a different language failed)</td>
 </tr>
 
-<tr>
-<td>String</td>
-<td>getImagePath()</td>
-<td>Gets the screenshot image path</td>
-</tr>
-
-<tr>
-<td>String</td>
-<td>getImageReferenceId()</td>
-<td>Gets the image reference Id</td>
-</tr>
-
-<tr>
-<td>String</td>
-<td>getImageRequestId()</td>
-<td>Gets the image request Id</td>
-</tr>
-
 </table>
 </div>
 
@@ -666,7 +646,7 @@ The Vidus SDK has APIs to capture interactive realtime selfie video with customi
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[Video Challenge Node](#video-challenge-node)**
+7. **[PIVNode](#piv-node)** (Pre-Issuance Verification Node)
 
 The Input Nodes are explained below,
 
@@ -806,7 +786,7 @@ Captures a video recording with a user defined time
 </table>
 </div>
 
-#### Video Challenge Node
+#### PIVNode
 
 <div>
 <table style="width:100%">
@@ -837,11 +817,6 @@ Captures a video recording with a user defined time
 <tr>
 <td><b>setLanguage</b>(<em>String language</em>)</td>
 <td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak</i></b> has to be spoken</td>
-</tr>
-
-<tr>
-<td><b>setImageUpload</b>(<em>boolean imageUpload</em>)</td>
-<td>Sets the flag to upload the screenshot</td>
 </tr>
 
 <tr>
