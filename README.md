@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.14-blue)
+![version](https://img.shields.io/badge/version-v2.0.15-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -92,7 +92,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.14'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.15'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
@@ -646,7 +646,7 @@ The Vidus SDK has APIs to capture interactive realtime selfie video with customi
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[PIVNode](#piv-node)** (Pre-Issuance Verification Node)
+7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
 
 The Input Nodes are explained below,
 
@@ -786,7 +786,7 @@ Captures a video recording with a user defined time
 </table>
 </div>
 
-#### PIVNode
+#### PIV Node
 
 <div>
 <table style="width:100%">
