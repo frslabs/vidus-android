@@ -1,5 +1,9 @@
 # Changelog
 
+## **v2.0.19** - *20-01-2020*
+### Added
+- Bug fixes.
+
 ## **v2.0.18** - *18-12-2019*
 ### Added
 - Bug fixes.
