@@ -1,5 +1,10 @@
 # Changelog
 
+## **v2.0.20** - *22-01-2020*
+### Added
+- Language accent added(exampoe Indian English).
+- Bug fixes.
+
 ## **v2.0.19** - *20-01-2020*
 ### Added
 - Bug fixes.
