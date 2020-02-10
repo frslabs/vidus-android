@@ -2,7 +2,7 @@
 
 ## **v2.0.21** - *10-02-2020*
 ### Added
-- Added video preview option.
+- Added video preview option and record again option.
 - Added scroll text speed in declation node.
 
 ## **v2.0.20** - *22-01-2020*
