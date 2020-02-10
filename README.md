@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.0.20-blue)
+![version](https://img.shields.io/badge/version-v2.0.21-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -95,11 +95,11 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.0.20'
+    implementation 'com.frslabs.android.sdk:vidus:2.0.21'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:0.1.1'
+    implementation 'com.frslabs.android.sdk:torus:0.1.2'
     implementation 'com.google.code.gson:gson:2.8.5'
    
 }
@@ -186,6 +186,8 @@ public class MainActivity extends AppCompatActivity implements VidusResultCallba
         VidusConfig vidusConfig = new VidusConfig.Builder()
                 .setLicenseKey(VIDUS_LICENSE_KEY)
                 .setShowInstruction(false) 
+                //If the user wants preivew enabled to true
+                .showPreview(false)
                 .setEncryptionKey(VIDUS_ENCRYPTION_KEY)
                 .setVidusNode(vidusNode)
                 .setApiCredentials(new VidusApiCredentials(VIDUS_API_BASE_URL
@@ -262,6 +264,8 @@ Initialise `VidusNode` to include all the nodes as given below
                 .addNode(DECLARATION_NODE, new DeclarationNode()
                         .setVideoDeclarationText("PLACE_TEXT_HERE")
                         .setVideoDeclarationSpokenMethod(VidusUtility.SPOKEN_BY_MACHINE)
+                        //Lesser the value greater the text scroll speed (user can specify from 10.0 to 50.0)
+                        .setVideoTextSpeed(35.0)//35.0f
                         .setVideoDeclarationVoiceType(VidusUtility.VOICE_TYPE_FEMALE))
 
                 .addNode(OSV_RECORDER_NODE, new OSVRecorderNode()
@@ -304,7 +308,7 @@ For handling the result of all the nodes, refer the code below
         ChallengeTextNodeResult challengeTextNodeResult = vidusResult.getChallengeTextNodeById(CHALLENGE_TEXT_NODE);
         DeclarationNodeResult declarationNodeResult = vidusResult.getDeclarationNodeById(DECLARATION_NODE);
         OSVRecorderNodeResult osvRecorderNodeResult = vidusResult.getOSVRecorderNodeById(OSV_RECORDER_NODE);
-        OSVChallengeTextNodeResult osvChallengeTextNodeResult = vidusResult.getOSVChallengeTextNodeById(OSV_TEXT_RECORDER_NODE);
+        OSVChallengeTextNodeResult osvChallengeTextNodeResult =               vidusResult.getOSVChallengeTextNodeById(OSV_TEXT_RECORDER_NODE);
         PIVNodeResult pivNodeResult = vidusResult.getPIVNodeById(PIV_NODE);
 
         /* Handle the Vidus Sdk result here */
@@ -735,6 +739,11 @@ Captures a video recording which will include a user-read or machine-read text/d
  <td><b>setVideoDeclarationVoiceType</b>(<em>int videoDeclarationVoiceType</em>)</td>
  <td>(OPTIONAL) </br> Sets the voice type for the machine-read text.
  </br></br> Values are </br> <b>VideoSdkUtility.VOICE_TYPE_MALE </br> VideoSdkUtility.VOICE_TYPE_FEMALE</b>(Default Value) </td>
+ </tr>
+ <tr>
+ <td><b>setVideoTextSpeed</b>(<em>int VideoTextSpeed</em>)</td>
+ <td>(OPTIONAL) </br> Lesser the value greater the text scroll speed.
+ </br></br> Values are </br> <b>10.0 </br> 60.0</b>(Default Value is 35.0) </td>
  </tr>
  <tr>
  <td><b>setVideoDeclarationSpokenMethod</b>(<em>int videoDeclarationSpokenMethod</em>)</td>
