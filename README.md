@@ -99,7 +99,7 @@ dependencies {
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:0.1.2'
+    implementation 'com.frslabs.android.sdk:torus:0.1.1'
     implementation 'com.google.code.gson:gson:2.8.5'
    
 }
