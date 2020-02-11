@@ -1,5 +1,10 @@
 # Changelog
 
+
+## **v2.0.21** - *10-02-2020*
+### Added
+- Bug fixes.
+
 ## **v2.0.21** - *10-02-2020*
 ### Added
 - Added video preview option and record again option.
