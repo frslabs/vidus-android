@@ -3,7 +3,7 @@
 ## **v2.1.3** - *13-03-2020*
 ### Added
 - Bug fixes.
-- PIVC node changes.
+- PIVC node pincode reading support.
 
 ## **v2.1.2** - *09-03-2020*
 ### Added
