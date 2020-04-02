@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v2.1.3-blue)
+![version](https://img.shields.io/badge/version-v2.2.0-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -95,7 +95,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
    
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:2.1.3'
+    implementation 'com.frslabs.android.sdk:vidus:2.2.0'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
@@ -279,8 +279,8 @@ Initialise `VidusNode` to include all the nodes as given below
                 .addNode(PIV_NODE, new PIVNode()
                         .setVideoChallengeText("Enter your question here. Prompt to confirm.")
                         .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE)
-                        .setVideoChallengeTextToSpeak("पाठ को अंग्रेजी में फॉलबैक के रूप में बोला जाए।"
-                            , "Enter text to be spoken as fallback in english. Prompt to confirm. ")
+                        .setVideoChallengeTextToSpeak("पाठ को अंग्रेजी में फॉलबैक के रूप में बोला जाए।")
+                        .setFallbackVideoChallengeTextToSpeak("Enter text to be spoken as fallback in english. Prompt to confirm. ")
                         .setLanguage("hi_IN")
                         .setPositiveButtonText("Yes")
                         .setNegativeButtonText("No"))
