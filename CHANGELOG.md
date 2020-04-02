@@ -1,5 +1,10 @@
 # Changelog
 
+## **v2.2.0** - *02-04-2020*
+### Added
+- Bug fixes.
+- PIVC node fallback video challenge text to speak method.
+
 ## **v2.1.3** - *13-03-2020*
 ### Added
 - Bug fixes.
