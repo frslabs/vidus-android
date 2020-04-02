@@ -823,7 +823,7 @@ Captures a video recording with a user defined time
 </tr>
 
 <tr>
-<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>,<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
+<td><b>setFallbackVideoChallengeTextToSpeak</b>(<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
 <td>Sets the text (Vernacular) that will be spoken, with a necessary fallback text (In English) that will be spoken if speaking the former text failed. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine.</td>
 </tr>
 
