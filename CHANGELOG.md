@@ -1,5 +1,12 @@
 # Changelog
 
+
+## **v3.0.0** - *27-08-2020*
+
+### Added
+- Code Migrated to AndroidX
+
+
 ## **v2.2.0** - *02-04-2020*
 ### Added
 - Bug fixes.
