@@ -90,16 +90,25 @@ And then, add the dependencies
 // ...
 
 dependencies {
+
     /* Dependencies for Vidus SDK */ 
-    implementation 'com.android.support:design:<version above 23.4.0>'      
-    implementation 'com.android.support.constraint:constraint-layout:<version above 1.1.3>'
-   
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    
+    implementation 'com.google.android.material:material:1.2.0'
+       
     // Vidus Core Dependency
     implementation 'com.frslabs.android.sdk:vidus:3.0.0'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
     implementation 'com.frslabs.android.sdk:torus:1.0.0'
+    
+    implementation 'androidx.multidex:multidex:2.0.1'
+    
     implementation 'com.google.code.gson:gson:2.8.5'
    
 }
