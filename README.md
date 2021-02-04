@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.0.0-blue)
+![version](https://img.shields.io/badge/version-v3.0.4-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -101,7 +101,7 @@ dependencies {
     implementation 'com.google.android.material:material:<lastest verison>'
        
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:3.0.0'
+    implementation 'com.frslabs.android.sdk:vidus:3.0.4'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
@@ -293,6 +293,14 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setLanguage("hi_IN")
                         .setPositiveButtonText("Yes")
                         .setNegativeButtonText("No"))
+                .addNode(PIVC_NODE, new PIVCNode()
+                        .setVideoChallengeText("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
+                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE)
+                        .setVideoChallengeTextToSpeak("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
+                        .setFallbackVideoChallengeTextToSpeak("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
+                        .setLanguage("kn_IN")
+                        .setPositiveButtonText("ಹೌದು")
+                        .setNegativeButtonText("ಇಲ್ಲ"))
 
                 .build();
 
@@ -319,6 +327,7 @@ For handling the result of all the nodes, refer the code below
         OSVRecorderNodeResult osvRecorderNodeResult = vidusResult.getOSVRecorderNodeById(OSV_RECORDER_NODE);
         OSVChallengeTextNodeResult osvChallengeTextNodeResult =               vidusResult.getOSVChallengeTextNodeById(OSV_TEXT_RECORDER_NODE);
         PIVNodeResult pivNodeResult = vidusResult.getPIVNodeById(PIV_NODE);
+        PIVCNodeResult pivNodeResult = vidusResult.getPIVCNodeById(PIVC_NODE);
 
         /* Handle the Vidus Sdk result here */
         Log.i(TAG, "onActivityResult: VideoPath:" + videoPath);
@@ -405,6 +414,11 @@ Given below are the Result classes in brief.
  <td>PIVNodeResult</td>
  <td>getPIVNodeById()</td>
  <td>Gets the exact PIVNode result by Id</td>
+ </tr>
+   <tr>
+ <td>PIVCNodeResult</td>
+ <td>getPIVCNodeById()</td>
+ <td>Gets the exact PIVCNode result by Id</td>
  </tr>
 </table>
 </div>
@@ -632,6 +646,54 @@ Each of the individual Node result classes are briefed below
 </table>
 </div>
 
+##### PIVCNodeResult
+
+<div>
+<table style="width:100%">
+<tr>
+<th bgcolor="#F1F1F1" colspan="3">Public Methods</th>
+</tr>
+  
+<tr>
+<td>int</td>
+<td>getStartTime()</td>
+<td>Gets the time(<em>seconds</em>) when the node started</td>
+</tr>
+
+<tr>
+<td>int</td>
+<td>getStopTime()</td>
+<td>Gets the time(<em>seconds</em>) when the node stopped</td>
+</tr>
+  
+<tr>
+<td>String</td>
+<td>getVideoChallengeQuestion()</td>
+<td>Gets the question which was displayed</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getVideoChallengeAnswer()</td>
+<td>Gets the value of button clicked</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getVideoChallengeTextToSpeak()</td>
+<td>Gets the text which was spoken</td>
+</tr>
+
+<tr>
+<td>String</td>
+<td>getFallbackVideoChallengeTextToSpeak()</td>
+<td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking <b><i>VideoChallengeText</i></b> in a different language failed)</td>
+</tr>
+
+</table>
+</div>
+
+
 ## Vidus Error Codes
 
 Following error codes will be returned on the `onVidusFailure` method of the callback
@@ -664,6 +726,9 @@ The Vidus SDK has APIs to capture interactive realtime selfie video with customi
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
 7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
+
+7. **[PIVC Node](#pivc-node)**
+
 
 The Input Nodes are explained below,
 
@@ -860,6 +925,57 @@ Captures a video recording with a user defined time
 </table>
 </div>
 
+#### PIVC Node
+
+<div>
+<table style="width:100%">
+<tr>
+<th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
+</tr>
+<tr>
+<td><b>setVideoChallengeText</b>(<em>String videoChallengeText</em>)</td>
+<td>Sets the text that will be displayed.
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextTime</b>(<em>int videoChallengeTextTime</em>)</td>
+<td>Sets the time(<em>seconds</em>) taken for the recording of the node.
+</br></br> Values should be between <b> 1 and 100 </b> </td>
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>)</td>
+<td>Sets the text(In English) that will be spoken. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine. </td>
+</tr>
+
+<tr>
+<td><b>setFallbackVideoChallengeTextToSpeak</b>(<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
+<td>Sets the text (Vernacular) that will be spoken, with a necessary fallback text (In English) that will be spoken if speaking the former text failed. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine.</td>
+</tr>
+
+<tr>
+<td><b>setLanguage</b>(<em>String language</em>)</td>
+<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak</i></b> has to be spoken</td>
+</tr>
+
+<tr>
+<td><b>setPositiveButtonText</b>(<em>String positiveButtonText</em>)</td>
+<td>Sets the text to be shown in the Positive action button.
+</tr>
+
+<tr>
+<td><b>setNegativeButtonText</b>(<em>String negativeButtonText</em>)</td>
+<td>Sets the text to be shown in the Negative action button.
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextVoiceType</b>(<em>int videoChallengeTextVoiceType</em>)</td>
+<td>(OPTIONAL) </br> Sets the voice type for the machine-read text.
+</br></br> Values are </br> <b>VideoSdkUtility.VOICE_TYPE_MALE </br> VideoSdkUtility.VOICE_TYPE_FEMALE</b>(Default Value) </td>
+</tr>
+
+</table>
+</div>
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
