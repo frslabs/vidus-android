@@ -1,5 +1,9 @@
 # Changelog
 
+## **v3.0.4** - *3-02-2021*
+
+### Added
+- PIVC node added
 
 ## **v3.0.0** - *27-08-2020*
 
@@ -12,12 +16,12 @@
 ## **v2.2.0** - *02-04-2020*
 ### Added
 - Bug fixes.
-- PIVC node fallback video challenge text to speak method.
+- PIV node fallback video challenge text to speak method.
 
 ## **v2.1.3** - *13-03-2020*
 ### Added
 - Bug fixes.
-- PIVC node pincode reading support.
+- PIV node pincode reading support.
 
 ## **v2.1.2** - *09-03-2020*
 ### Added
