@@ -1,5 +1,10 @@
 # Changelog
 
+## **v3.0.5** - *8-02-2021*
+
+### Added
+- Background color change in circle view all nodes. 
+
 ## **v3.0.4** - *3-02-2021*
 
 ### Added
