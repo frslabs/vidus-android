@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.0.5-blue)
+![version](https://img.shields.io/badge/version-v3.0.6-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -101,7 +101,7 @@ dependencies {
     implementation 'com.google.android.material:material:<lastest verison>'
        
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:3.0.5'
+    implementation 'com.frslabs.android.sdk:vidus:3.0.6'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
@@ -301,7 +301,7 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setLanguage("kn_IN")
                         .setPositiveButtonText("ಹೌದು")
                         .setNegativeButtonText("ಇಲ್ಲ"))
-
+                                               .addNode(PIVC_NODE,com.frslabs.android.sdk.vidus.utils.FileUtils.getPIVCNode(com.frslabs.android.sdk.vidus.utils.FileUtils.readFromfileInputStream(this.getResources().getAssets().open("en_US")), templateJsonString, "en_US")) # Template JsonString 
                 .build();
 
         // ...
@@ -319,6 +319,8 @@ For handling the result of all the nodes, refer the code below
 
         String videoPath = vidusResult.getVideoPath();
         String referenceId = vidusResult.getReferenceId(); //Optional
+        String imagePath = vidusResult.getImagePath();// Optional
+
 
         SimpleRecorderNodeResult simpleRecorderNodeResult = vidusResult.getSimpleRecorderNodeById(SIMPLE_NODE_1);
         ChallengeCodeNodeResult challengeCodeNodeResult = vidusResult.getChallengeCodeNodeById(CHALLENGE_CODE_NODE);
@@ -690,6 +692,12 @@ Each of the individual Node result classes are briefed below
 <td>Gets the fallback text (English) which was spoken. (Fallback text is spoken only if speaking <b><i>VideoChallengeText</i></b> in a different language failed)</td>
 </tr>
 
+<tr>
+<td>String</td>
+<td>getDisplayText()</td>
+<td>Gets display question text</td>
+</tr>
+
 </table>
 </div>
 
@@ -707,6 +715,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 807  | Invalid Config         |
 | 808  | Transaction Failed       |
 | 809  | No Internet Available             |
+| 810  | Timeout Error             |
 | 811  | Network Error |
 
 ## Vidus Parameters
@@ -973,6 +982,12 @@ Captures a video recording with a user defined time
 <td>(OPTIONAL) </br> Sets the voice type for the machine-read text.
 </br></br> Values are </br> <b>VideoSdkUtility.VOICE_TYPE_MALE </br> VideoSdkUtility.VOICE_TYPE_FEMALE</b>(Default Value) </td>
 </tr>
+
+<tr>
+<td><b>setDisplayText</b>(<em>String displayText</em>)</td>
+<td>Sets the text that will be displayed. </td>
+</tr>
+
 
 </table>
 </div>
