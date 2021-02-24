@@ -1,5 +1,11 @@
 # Changelog
 
+## **v3.0.6** - *24-02-2021*
+
+### Added
+- Capturing the image in PIVC node.
+- Timeout added.(15 minutes) 
+
 ## **v3.0.5** - *8-02-2021*
 
 ### Added
