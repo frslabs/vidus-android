@@ -329,7 +329,7 @@ For handling the result of all the nodes, refer the code below
         OSVRecorderNodeResult osvRecorderNodeResult = vidusResult.getOSVRecorderNodeById(OSV_RECORDER_NODE);
         OSVChallengeTextNodeResult osvChallengeTextNodeResult =               vidusResult.getOSVChallengeTextNodeById(OSV_TEXT_RECORDER_NODE);
         PIVNodeResult pivNodeResult = vidusResult.getPIVNodeById(PIV_NODE);
-        PIVCNodeResult pivNodeResult = vidusResult.getPIVCNodeById(PIVC_NODE);
+        PIVCNodeResult pivcNodeResult = vidusResult.getPIVCNodeById(PIVC_NODE);
 
         /* Handle the Vidus Sdk result here */
         Log.i(TAG, "onActivityResult: VideoPath:" + videoPath);
@@ -340,6 +340,8 @@ For handling the result of all the nodes, refer the code below
         Log.i(TAG, "onActivityResult: " + osvRecorderNodeResult.toString());
         Log.i(TAG, "onActivityResult: " + osvChallengeTextNodeResult.toString());
         Log.i(TAG, "onActivityResult: " + pivNodeResult.toString());
+        Log.i(TAG, "onActivityResult: " + pivcNodeResult.toString());
+
 
     }
 
