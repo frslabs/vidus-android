@@ -293,14 +293,6 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setLanguage("hi_IN")
                         .setPositiveButtonText("Yes")
                         .setNegativeButtonText("No"))
-                .addNode(PIVC_NODE, new PIVCNode()
-                        .setVideoChallengeText("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
-                        .setVideoChallengeTextVoiceType(VidusUtility.VOICE_TYPE_FEMALE)
-                        .setVideoChallengeTextToSpeak("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
-                        .setFallbackVideoChallengeTextToSpeak("ಆತ್ಮೀಯ ಶ್ರೀಮಾನ್, ನೀವು ಕಳೆದ 60 ದಿನಗಳಲ್ಲಿ ಯಾವುದೇ ಅಂತರರಾಷ್ಟ್ರೀಯ ಸ್ಥಳಕ್ಕೆ ಪ್ರಯಾಣಿಸಿರುವಿರಾ, ಅಥವಾ ನೀವು ಕೋವಿಡ್ 19 ಗಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟಿರುವಿರಾ ಅಥವಾ ಅದಕ್ಕಾಗಿ ಪರೀಕ್ಷಿಸಲ್ಪಟ್ಟ ಯಾವುದೇ ವ್ಯಕ್ತಿಯೊಂದಿಗೆ ಸಂಪರ್ಕದಲ್ಲಿರುವಿರಾ ಅಥವಾ ವೈದ್ಯರ ಸಲಹೆಯ ಆಧಾರದ ಮೇಲೆ ನೀವು ಪ್ರಸ್ತುತ ಸ್ವಯಂ ಸಂಪರ್ಕತಡೆಯನ್ನು ಹೊಂದಿರುವಿರಾ")
-                        .setLanguage("kn_IN")
-                        .setPositiveButtonText("ಹೌದು")
-                        .setNegativeButtonText("ಇಲ್ಲ"))
                                                .addNode(PIVC_NODE,com.frslabs.android.sdk.vidus.utils.FileUtils.getPIVCNode(com.frslabs.android.sdk.vidus.utils.FileUtils.readFromfileInputStream(this.getResources().getAssets().open("en_US")), templateJsonString, "en_US")) # Template JsonString 
                 .build();
 
