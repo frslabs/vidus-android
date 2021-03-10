@@ -292,8 +292,7 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setFallbackVideoChallengeTextToSpeak("Enter text to be spoken as fallback in english. Prompt to confirm. ")
                         .setLanguage("hi_IN")
                         .setPositiveButtonText("Yes")
-                        .setNegativeButtonText("No"))
-                                               .addNode(PIVC_NODE,com.frslabs.android.sdk.vidus.utils.FileUtils.getPIVCNode(com.frslabs.android.sdk.vidus.utils.FileUtils.readFromfileInputStream(this.getResources().getAssets().open("en_US")), templateJsonString, "en_US")) # Template JsonString 
+                        .setNegativeButtonText("No"))                                                             .addNode(PIVC_NODE,com.frslabs.android.sdk.vidus.utils.FileUtils.getPIVCNode(com.frslabs.android.sdk.vidus.utils.FileUtils.readFromfileInputStream(this.getResources().getAssets().open("en_US")), templateJsonString, "en_US")) # Template JsonString 
                 .build();
 
         // ...
