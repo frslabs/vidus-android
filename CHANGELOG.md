@@ -1,5 +1,10 @@
 # Changelog
 
+## **v3.0.7** - *17-03-2021*
+
+### Added
+- Capturing the image in PIVC node.
+
 ## **v3.0.6** - *24-02-2021*
 
 ### Added
