@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.0.7-blue)
+![version](https://img.shields.io/badge/version-v3.0.8-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -31,7 +31,7 @@ Once you have the license , follow the below instructions for a successful integ
 
 ## Android SDK Requirements
 
-**Minimum SDK Version** -  **17** or higher
+**Minimum SDK Version** -  **21** or higher
 
 ## Download
 
