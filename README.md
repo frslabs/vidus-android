@@ -101,7 +101,7 @@ dependencies {
     implementation 'com.google.android.material:material:<lastest verison>'
        
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:3.0.7'
+    implementation 'com.frslabs.android.sdk:vidus:3.0.9'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
