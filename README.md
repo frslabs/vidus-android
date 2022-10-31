@@ -274,6 +274,7 @@ Initialise `VidusNode` to include all the nodes as given below
                         .setVideoDeclarationText("PLACE_TEXT_HERE")
                         .setVideoDeclarationSpokenMethod(VidusUtility.SPOKEN_BY_MACHINE)
                         //Lesser the value greater the text scroll speed (user can specify from 10.0 to 50.0)
+                        .setShowFaceOverlay(true) //OPTIONAL: default value true
                         .setVideoTextSpeed(35.0)//35.0f
                         .setVideoDeclarationVoiceType(VidusUtility.VOICE_TYPE_FEMALE))
 
@@ -820,6 +821,10 @@ Captures a video recording which will include a user-read or machine-read text/d
  <td><b>setVideoTextSpeed</b>(<em>int VideoTextSpeed</em>)</td>
  <td>(OPTIONAL) </br> Lesser the value greater the text scroll speed.
  </br></br> Values are </br> <b>10.0 </br> 60.0</b>(Default Value is 35.0) </td>
+ </tr>
+ <tr>
+ <td><b>setShowFaceOverlay</b>(<em>boolean showFaceOverlay</em>)</td>
+ <td>(OPTIONAL) </br> Values are </br>  <b>true or false</b>(Default Value is true) </td>
  </tr>
  <tr>
  <td><b>setVideoDeclarationSpokenMethod</b>(<em>int videoDeclarationSpokenMethod</em>)</td>
