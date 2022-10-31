@@ -1,5 +1,11 @@
 # Changelog
 
+
+## **v3.0.9** - *31-10-2022*
+
+### Added
+- Added show or hide face overlay option in declaration node.
+ 
 ## **v3.0.8** - *31-10-2022*
 - Updated face detection implementation.
 
