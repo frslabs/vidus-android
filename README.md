@@ -824,7 +824,8 @@ Captures a video recording which will include a user-read or machine-read text/d
  </tr>
  <tr>
  <td><b>setShowFaceOverlay</b>(<em>boolean showFaceOverlay</em>)</td>
- <td>(OPTIONAL) </br> Values are </br>  <b>true or false</b>(Default Value is true) </td>
+ <td>(OPTIONAL) </br> Show or hide face overlay.
+</br></br> Values are </br>  <b>true or false</b>(Default Value is true) </td>
  </tr>
  <tr>
  <td><b>setVideoDeclarationSpokenMethod</b>(<em>int videoDeclarationSpokenMethod</em>)</td>
