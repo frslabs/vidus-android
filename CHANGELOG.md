@@ -1,5 +1,8 @@
 # Changelog
 
+## **v3.0.8** - *31-10-2022*
+- Updated face detection implementation.
+
 ## **v3.0.7** - *17-03-2021*
 
 ### Added
