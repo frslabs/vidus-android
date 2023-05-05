@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.1.1-blue)
+![version](https://img.shields.io/badge/version-v3.1.2-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -712,6 +712,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 809  | No Internet Available             |
 | 810  | Timeout Error             |
 | 811  | Network Error |
+| 812  | Camera Error  |
 
 ## Vidus Parameters
 
