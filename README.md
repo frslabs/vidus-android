@@ -731,7 +731,7 @@ See the below table for the public APIs of Vidus SDK,
 |:---------------------------------------------------- |:-------------------- |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | *setLicenceKey(String licenseKey)*                   | NULL                 | Yes      | Sets the License Key needed for Vidus SDK                          |
 | *setShowInstruction(boolean showInstructions)*      | false                | Optional      | If it is **true** then the instruction screen will be shown to the user before showing the capture screen.                         |
-| *setVidusNode(VidusNode vidusNode)*   | NULL                 | Yes      | Refer [Vidus Parameters](#vidusparameter)                         |
+| *setVidusNode(VidusNode vidusNode)*   | NULL                 | Yes      | Refer [Vidus Parameters](#vidus-parameters)                         |
 | *setCamera(Boolean var)*                             | Utility.CAMERA_FRONT | Optional | For front camera **Utility.CAMERA_FRONT** and for back camera **Utility.CAMERA_BACK** |
 | *showPreview(Boolean var)*                           | false                | Optional | Show preview of the captured video before finish. |
 | *screenRecord(Boolean var)*  | false  | Optional  | Enable or disable screen reording  |
