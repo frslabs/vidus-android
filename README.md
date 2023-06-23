@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.1.3-blue)
+![version](https://img.shields.io/badge/version-v3.1.4-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -713,6 +713,29 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 810  | Timeout Error             |
 | 811  | Network Error |
 | 812  | Camera Error  |
+
+## Vidus SDK API 
+
+See the below table for the public APIs of Vidus SDK,
+
+##### Vidus
+| Method/Constructor                                   | Comments    |
+|:---------------------------------------------------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Vidus(VidusConfig var1)                                                 | Instantiates the Vidus Object |    
+| *start(Context activityContext, VidusResultCallback vidusResultCallback)*   | Starts the Vidus SDK |
+
+
+##### VidusConfig
+`VidusConfig.Builder()` allows to instantiate the `VidusConfig` object with customisable features. `VidusConfig` is to be set when instantiating `Vidus` object , See [Vidus](#vidus)
+| Method                                               | Default              | Required | Comments    |
+|:---------------------------------------------------- |:-------------------- |:-------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| *setLicenceKey(String licenseKey)*                   | NULL                 | Yes      | Sets the License Key needed for Vidus SDK                          |
+| *setShowInstruction(boolean showInstructions)*      | false                | Optional      | If it is **true** then the instruction screen will be shown to the user before showing the capture screen.                         |
+| *setVidusNode(VidusNode vidusNode)*   | NULL                 | Yes      | Refer [Vidus Parameters](#vidusparameter)                         |
+| *setCamera(Boolean var)*                             | Utility.CAMERA_FRONT | Optional | For front camera **Utility.CAMERA_FRONT** and for back camera **Utility.CAMERA_BACK** |
+| *showPreview(Boolean var)*                           | false                | Optional | Show preview of the captured video before finish. |
+| *screenRecord(Boolean var)*  | false  | Optional  | Enable or disable screen reording  |
+| *build()*   | -               | -      | Builds VidusConfig Instance  |
 
 ## Vidus Parameters
 
