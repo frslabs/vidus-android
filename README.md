@@ -30,6 +30,22 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Vidus SDK onto your Android Application.
 
+## Overview of Vidus SDK Libraries
+This section lists the Vidus SDK Libraries that are available for Android with their gradle dependencies, latest version and their size.
+
+| SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
+| --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
+| [Vidus SDK](#vidus-sdk) (Required)                                     | com.frslabs.android.sdk:vidus                   | ![version](https://img.shields.io/badge/version-v3.2.0-blue)    | 550 KB     |
+| [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 6.2 MB     |
+
+### Face Dependencies
+Vidus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
+#### Core Face Bundled SDK
+Include this dependency if size of the SDK is not an issue (Adds ~6.2 MB to the app size). This is the recommended approach.
+#### Core Face Unbundled SDK
+Include this dependency if increase in SDK size is a concern (Adds ~600 KB to the app size). However, upon first run (and only on first run), the face dependencies are downloaded while users are shown a screen with a progress bar. The Core Face Bundled SDK does not have this behaviour as all associated files are bundled during compile time itself (hence the increase in size).
+
+
 ## Android SDK Requirements
 
 **Minimum SDK Version** -  **21** or higher
@@ -42,29 +58,18 @@ Add the following code to your `project` level `build.gradle` file
 
 ```groovy
 allprojects { 
-    repositories { 
-
-        maven { 
-            // URL for Vidus SDK. 
-            url "https://vidus-android.repo.frslabs.space/"                  
-            credentials { 
-                username '<YOUR_USERNAME>' 
-                password '<YOUR_PASSOWRD>' 
+    repositories {
+        //'vidus-android' and  'common-core-android' is required for vidus and core face SDKs.
+        // 'torus-android' is required for vidus billing dependencies
+        ['torus-android' , 'vidus-android' , 'common-core-android'].each { value->
+            maven {
+                url "https://${value}.repo.frslabs.space/"
+                credentials {
+                    username '<YOUR_USERNAME>' 
+                    password '<YOUR_PASSOWRD>' 
+                }
             }
         }
-       
-       /*
-        *Include below code only for transaction based billing
-        */
-        //Maven credentials for the Torus SDK
-        maven {
-            url "https://torus-android.repo.frslabs.space/"
-            credentials {
-                username '<YOUR_USERNAME>'
-                password '<YOUR_PASSOWRD>'
-            }
-        }
-        
     }
 }
 ```
@@ -103,6 +108,12 @@ dependencies {
        
     // Vidus Core Dependency
     implementation 'com.frslabs.android.sdk:vidus:3.1.0'
+
+    //Use any one of the core-face modules.
+    // REQUIRED - Use bundled core-face to available required module at apk build time.
+    implementation 'com.frslabs.android.sdk:core-face-bundled:1.0.0'
+    // REQUIRED - Use unbundled core-face to download required module before start the SDK. If SDK size is concerned then use unbundled instead of bundled core-face.
+    //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.0'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
