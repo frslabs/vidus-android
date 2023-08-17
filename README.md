@@ -22,8 +22,6 @@ You can find the release history at [Changelog](CHANGELOG.md)
 
 ## Prerequisite
 
-***NOTE : Encryption of VIDUS SDK Result is under development***
-
 You will need a valid license to use the Vidus SDK, which can be obtained by contacting `support@frslabs.com` . 
 
 Depending on the license - offline or online - you have opted for, the ping functionality to billing servers will be disabled or enabled. For instance, if you have opted for the offline SDK model, then there will be no server ping needed to our billing server to bill you. However, if you have chosen a transaction based pricing, then after each transaction, a ping request will be made to our billing server. This cannot be overrided by the App. A point to note is that if the ping transaction fails for any reason, the whole transaction will be void without any results from the SDK.
@@ -107,12 +105,13 @@ dependencies {
     implementation 'com.google.android.material:material:<lastest verison>'
        
     // Vidus Core Dependency
-    implementation 'com.frslabs.android.sdk:vidus:3.1.0'
+    implementation 'com.frslabs.android.sdk:vidus:3.2.0'
 
-    //Use any one of the core-face modules.
-    // REQUIRED - Use bundled core-face to available required module at apk build time.
+    // REQUIRED : Use ANY ONE of the below core-face modules, i.e either core-face-bundled OR core-face-unbundled
+    // Recommended over core-face-unbundled
     implementation 'com.frslabs.android.sdk:core-face-bundled:1.0.0'
-    // REQUIRED - Use unbundled core-face to download required module before start the SDK. If SDK size is concerned then use unbundled instead of bundled core-face.
+
+    // Uncomment the below line and remove core-face-bundled mentioned above to use core-face-unbundled dependency.
     //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.0'
     
     // OPTIONAL - Required if transaction based billing is enabled
