@@ -116,7 +116,7 @@ dependencies {
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:1.1.0'
+    implementation 'com.frslabs.android.sdk:torus:1.2.1'
     
     implementation 'androidx.multidex:multidex:2.0.1'
     
