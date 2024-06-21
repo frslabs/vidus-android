@@ -33,7 +33,7 @@ This section lists the Vidus SDK Libraries that are available for Android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Vidus SDK](#vidus-sdk) (Required)                                     | com.frslabs.android.sdk:vidus                   | ![version](https://img.shields.io/badge/version-v3.2.3-blue)    | 550 KB     |
+| [Vidus SDK](#vidus-sdk) (Required)                                     | com.frslabs.android.sdk:vidus                   | ![version](https://img.shields.io/badge/version-v3.2.4-blue)    | 550 KB     |
 | [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 6.2 MB     |
 
 ### Face Dependencies
