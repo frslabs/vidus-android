@@ -1,5 +1,5 @@
 # VIDUS ANDROID SDK
-![version](https://img.shields.io/badge/version-v3.2.4-blue)
+![version](https://img.shields.io/badge/version-v3.2.5-blue)
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
@@ -33,8 +33,8 @@ This section lists the Vidus SDK Libraries that are available for Android with t
 
 | SDK Library                                 | Gradle dependency                                 | Latest version  | Size                    |
 | --------------------------------------------| ------------------------------------------------- | --------------- | ----------------------- |
-| [Vidus SDK](#vidus-sdk) (Required)                                     | com.frslabs.android.sdk:vidus                   | ![version](https://img.shields.io/badge/version-v3.2.4-blue)    | 550 KB     |
-| [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.0-blue)     | 6.2 MB     |
+| [Vidus SDK](#vidus-sdk) (Required)                                     | com.frslabs.android.sdk:vidus                   | ![version](https://img.shields.io/badge/version-v3.2.5-blue)    | 550 KB     |
+| [Core Face Bundled SDK](#core-face-bundled-sdk) (Required) | com.frslabs.android.sdk:core-face-bundled  | ![version](https://img.shields.io/badge/version-v1.0.1-blue)     | 6.2 MB     |
 
 ### Face Dependencies
 Vidus uses Face detection capabilities via either of these two dependencies, and it is required to include any one of them. [Core Face Bundled SDK](#core-face-bundled) and [Core Face Unbundled SDK](#core-face-unbundled). If size is not an issue, we recommend going with the Core Face Bundled SDK. More details about these dependencies are found below.
@@ -109,14 +109,14 @@ dependencies {
 
     // REQUIRED : Use ANY ONE of the below core-face modules, i.e either core-face-bundled OR core-face-unbundled
     // Recommended over core-face-unbundled
-    implementation 'com.frslabs.android.sdk:core-face-bundled:1.0.0'
+    implementation 'com.frslabs.android.sdk:core-face-bundled:1.0.1'
 
     // Uncomment the below line and remove core-face-bundled mentioned above to use core-face-unbundled dependency.
-    //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.0'
+    //implementation 'com.frslabs.android.sdk:core-face-unbundled:1.0.1'
     
     // OPTIONAL - Required if transaction based billing is enabled
     // Vidus billing dependencies
-    implementation 'com.frslabs.android.sdk:torus:1.2.1'
+    implementation 'com.frslabs.android.sdk:torus:1.2.1@aar'
     
     implementation 'androidx.multidex:multidex:2.0.1'
     
