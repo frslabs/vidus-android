@@ -2,6 +2,9 @@
 
 ‼ ATTENTION ‼ → BREAKING CHANGE introduced at Vidus SDK v3.1.0. We have introduced a new license format. If you are using versions prior to v3.1.0 and intend to update to v3.1.0 or above please contact support@frslabs.com for an updated license.
 
+## **v3.2.6** - *11-03-2025*
+- Bug fixes.
+
 ## **v3.2.5** - *28-11-2024*
 - Bug fixes.
 
